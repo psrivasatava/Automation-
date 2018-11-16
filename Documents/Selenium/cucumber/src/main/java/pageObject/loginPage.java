@@ -12,13 +12,13 @@ public class loginPage extends Testbase{
 	
 	
 		 
-	@FindBy(xpath = "//*[@id=\"7\"]")
+	@FindBy(css = "input[data-hook='login.username']")
  	public WebElement UserName;
  
-	@FindBy(xpath = "//*[@id=\"11\"]")
+	@FindBy(css = "input[data-hook='login.password']")
  	public WebElement Password;
  
-	@FindBy(css = "button[data-hook ='login.submit']")
+	@FindBy(css = "BUTTON[data-hook='login.submit']")
  	public WebElement btn_Login ;
 	
 	public loginPage()

@@ -23,17 +23,13 @@ public class activation extends Testbase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void submit()
+	public void submit() throws InterruptedException
 	{
+	Thread.sleep(5000);
 		Select submit1 = new Select(submit);
 		submit1.selectByVisibleText("Activate");
 		go.click();
+		Thread.sleep(5000);
 		go1.click();
 	}
-	
-
-		
-	
-	
-	
-}
+	}

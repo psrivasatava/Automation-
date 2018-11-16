@@ -33,11 +33,12 @@ public class submit extends Testbase{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void submit1()
+	public void submit1() throws Exception
 	{
 		Select submit1 = new Select(submit);
 		submit1.selectByVisibleText("Submit");
 		go.click();
+		Thread.sleep(10000);
 		go1.click();
 	}
 	

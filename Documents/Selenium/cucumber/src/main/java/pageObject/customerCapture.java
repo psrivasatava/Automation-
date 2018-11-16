@@ -121,11 +121,11 @@ public class customerCapture extends Testbase{
 	@FindBy(css = "input[data-hook='.employer']")
 	public WebElement employer ;
 	
-	@FindBy(css = "input[data-hook='.yearsWithEmployer']")
-	public WebElement yearsWithEmployer ;
+	@FindBy(css = "input[name='employment.employmentDetails.employmentStart']")
+	public WebElement startdate ;
 	
-	@FindBy(css = "input[data-hook='.monthsWithEmployer']")
-	public WebElement monthsWithEmployer ;
+	@FindBy(css = "input[name='employment.employmentDetails.employmentEnd']")
+	public WebElement enddate ;
 	
 	@FindBy(css = "input[name='employment.employersAddress.streetNumber']")
 	public WebElement employersAddressstreetNumber ;
@@ -180,13 +180,14 @@ public class customerCapture extends Testbase{
 	
 	public void newProposal()
 	{
-		newProposal.click();
+		clickon(driver,newProposal,40);
+		//newProposal.click();
 	}
 	
 
 	public void dpaAgreement()
 	{
-		dpaAgreement.click();
+		clickon(driver,dpaAgreement,50);
 	}
 	
 
@@ -347,6 +348,7 @@ public class customerCapture extends Testbase{
 	{
 		Select employmentType1 = new Select(employmentType);
 		employmentType1.selectByIndex(1);
+	   // clickon(driver,employmentType1,40);
 	}
 	
 	public void employmentStatus()
@@ -360,7 +362,6 @@ public class customerCapture extends Testbase{
 		try {
 			Thread.sleep(8000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		Select occupation1 = new Select(occupation);
@@ -377,14 +378,14 @@ public class customerCapture extends Testbase{
 		employer.sendKeys(employer1);
 	}
 	
-	public void yearsWithEmployer(String yearsWithEmployer1)
+	public void start(String startsat)
 	{
-		yearsWithEmployer.sendKeys(yearsWithEmployer1);
+		startdate.sendKeys(startsat);
 	}
 	
-	public void monthsWithEmployer(String monthsWithEmployer1)
+	public void end(String enddate1)
 	{
-		monthsWithEmployer.sendKeys(monthsWithEmployer1);
+		enddate.sendKeys(enddate1);
 	}
 	
 	public void employersAddressstreetNumber(String employersAddressstreetNumber1)

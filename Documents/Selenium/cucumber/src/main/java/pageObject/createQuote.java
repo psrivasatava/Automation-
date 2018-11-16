@@ -106,7 +106,7 @@ public class createQuote extends Testbase {
 		for(int i=0;i<list.size();i++)
 		{
 			System.out.println(list.get(i).getText());
-			if(list.get(i).getText().contains("Gold"))
+			if(list.get(i).getText().contains("Gold Lease purchase"))
 			{
 				list.get(i).click();
 				break;
